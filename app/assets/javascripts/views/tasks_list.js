@@ -1,6 +1,6 @@
 TodoApp.Views.TasksList = Backbone.View.extend({
   initialize: function() {
-    this.listenTo(this.collection, "add", this.render);
+    this.listenTo(this.collection, "add change destroy", this.render);
   },
 
   tagName: "ul",

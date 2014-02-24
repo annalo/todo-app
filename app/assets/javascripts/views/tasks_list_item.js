@@ -5,6 +5,7 @@ TodoApp.Views.TasksListItem = Backbone.View.extend({
 
   events: {
     "click input.task-item": "check",
+    "click a.task-item-delete": "delete"
   },
 
   tagName: "li",
@@ -26,5 +27,10 @@ TodoApp.Views.TasksListItem = Backbone.View.extend({
       this.model.set({"completed": false})
     }
     this.model.save();
+  },
+
+  delete: function(event) {
+    event.preventDefault();
+    this.model.destroy();
   }
 });

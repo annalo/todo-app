@@ -35,5 +35,6 @@ class Api::TasksController < ApplicationController
   def destroy
     @task = Task.find(params[:id])
     @task.destroy
+    render :json => @task
   end
 end
