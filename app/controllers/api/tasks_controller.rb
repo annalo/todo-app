@@ -32,6 +32,15 @@ class Api::TasksController < ApplicationController
     end
   end
 
+  def sort
+    @tasks = Task.all
+    @tasks.each do |task|
+      task.position = params[:task].index(task.id.to_s) + 1
+      task.save
+    end
+    render :json => @tasks
+  end
+
   def destroy
     @task = Task.find(params[:id])
     @task.destroy

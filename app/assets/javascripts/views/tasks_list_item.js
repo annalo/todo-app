@@ -10,6 +10,11 @@ TodoApp.Views.TasksListItem = Backbone.View.extend({
 
   tagName: "li",
   className: "list-item",
+
+  id: function() {
+    return "task_" + this.model.id;
+  },
+
   template: JST["tasks/list_item"],
 
   render: function() {

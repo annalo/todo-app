@@ -15,6 +15,8 @@
 //= require underscore
 //= require backbone
 //= require todo_app
+//= require jquery-ui.min
+//= require jquery.cookie
 //= require_tree ../templates
 //= require_tree ./models
 //= require_tree ./collections

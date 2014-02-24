@@ -3,5 +3,7 @@ TodoApp::Application.routes.draw do
     resources :tasks
   end
 
+  post '/api/tasks/sort', to: 'api/tasks#sort', :format => :json
+
   root :to => "root#root"
 end

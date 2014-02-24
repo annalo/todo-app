@@ -3,6 +3,6 @@ TodoApp.Collections.Tasks = Backbone.Collection.extend({
   url: "/api/tasks",
 
   comparator: function(task) {
-    return task.get("created_at");
+    return task.get("position");
   }
 });

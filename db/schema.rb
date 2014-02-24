@@ -11,13 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140221051718) do
+ActiveRecord::Schema.define(:version => 20140224231024) do
 
   create_table "tasks", :force => true do |t|
     t.string   "title",                         :null => false
     t.boolean  "completed",  :default => false, :null => false
     t.datetime "created_at",                    :null => false
     t.datetime "updated_at",                    :null => false
+    t.integer  "position"
   end
 
   add_index "tasks", ["completed"], :name => "index_tasks_on_completed"

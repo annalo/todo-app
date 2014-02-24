@@ -12,6 +12,23 @@ TodoApp.Routers.Router = Backbone.Router.extend({
     // tasks list
     var listView = new TodoApp.Views.TasksList({ collection: this.tasks });
     this.$rootEl.append(listView.render().$el);
+    $("ul#list-wrapper").sortable({
+      axis: 'y',
+      cursor: 'crosshair',
+      items: 'li',
+      opacity: 0.4,
+      update: function(){
+      $.ajax({
+        url: '/api/tasks/sort',
+        type: 'post',
+        data: $('ul#list-wrapper').sortable('serialize'),
+        dataType: 'script',
+        complete: function(request){
+          $('ul#list-wrapper').effect('highlight');
+        }
+      });
+    }
+    });
     // add tasks input box
     var newView = new TodoApp.Views.TaskNew({ collection: this.tasks });
     this.$rootEl.append(newView.render().$el);
