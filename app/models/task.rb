@@ -1,5 +1,6 @@
 class Task < ActiveRecord::Base
-  attr_accessible :complete, :title
+  attr_accessible :completed, :title
 
-  validates :title, :complete, :presence => true
+  validates :title, :presence => true
+  validates :completed, :inclusion => { :in => [true, false] }
 end

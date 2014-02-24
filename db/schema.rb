@@ -14,12 +14,12 @@
 ActiveRecord::Schema.define(:version => 20140221051718) do
 
   create_table "tasks", :force => true do |t|
-    t.string   "title",      :null => false
-    t.boolean  "complete",   :null => false
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "title",                         :null => false
+    t.boolean  "completed",  :default => false, :null => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
   end
 
-  add_index "tasks", ["complete"], :name => "index_tasks_on_complete"
+  add_index "tasks", ["completed"], :name => "index_tasks_on_completed"
 
 end

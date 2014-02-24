@@ -1,8 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.15'
-
-
 gem 'backbone-on-rails'
 gem 'jbuilder', '~> 2.0.2'
 gem 'jquery-rails'
@@ -16,9 +14,11 @@ end
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'factory_girl_rails'
 end
 
 group :test do
+  gem 'faker'
   gem 'guard-rspec'
 end
 

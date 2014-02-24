@@ -25,6 +25,7 @@ module TodoApp
         :routing_specs => false,
         :controller_specs => true,
         :request_specs => true
+      g.fixture_replacement :factory_girl, :dir => "spec/factories"
     end
   end
 end
