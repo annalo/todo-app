@@ -28,5 +28,6 @@ module TodoApp
       g.fixture_replacement :factory_girl, :dir => "spec/factories"
     end
     config.assets.paths << "app/assets/templates"
+    config.assets.initialize_on_precompile = false
   end
 end
