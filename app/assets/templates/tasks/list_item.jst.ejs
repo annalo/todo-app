@@ -1,4 +1,3 @@
 <% var checked = task.get("completed") === true ? "checked" : "" %>
-<input type="checkbox" class="task-item" data-task-id="<%= task.id %>" <%= checked %>>
-  <%= task.escape("title") %>
-</input>
+<input type="checkbox" class="task-item" data-task-id="<%= task.id %>" <%= checked %>></input>
+<%= task.escape("title") %>

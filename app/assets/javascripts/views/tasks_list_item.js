@@ -4,7 +4,7 @@ TodoApp.Views.TasksListItem = Backbone.View.extend({
   },
 
   events: {
-    "click input.task-item": "check"
+    "click input.task-item": "check",
   },
 
   tagName: "li",
@@ -19,8 +19,8 @@ TodoApp.Views.TasksListItem = Backbone.View.extend({
 
   check: function(event) {
     event.preventDefault();
-    var checked = $(event.target).val();
-    if(checked == "on") {
+    var checked = event.target.checked;
+    if(checked == true) {
       this.model.set({"completed": true})
     } else {
       this.model.set({"completed": false})
