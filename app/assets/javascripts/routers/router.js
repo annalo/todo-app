@@ -5,12 +5,16 @@ TodoApp.Routers.Router = Backbone.Router.extend({
   },
 
   routes: {
-    "": "list"
+    "": "home"
   },
 
-  list: function() {
-    var view = new TodoApp.Views.TasksList({ collection: this.tasks });
-    this._swapView(view);
+  home: function() {
+    // tasks list
+    var listView = new TodoApp.Views.TasksList({ collection: this.tasks });
+    this.$rootEl.append(listView.render().$el);
+    // add tasks input box
+    var newView = new TodoApp.Views.TaskNew({ collection: this.tasks });
+    this.$rootEl.append(newView.render().$el);
   },
 
   _swapView: function(view) {

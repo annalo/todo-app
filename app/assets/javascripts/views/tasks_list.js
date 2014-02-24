@@ -1,13 +1,14 @@
 TodoApp.Views.TasksList = Backbone.View.extend({
   initialize: function() {
-    this.listenTo(this.collection, "change save destroy", this.render);
+    this.listenTo(this.collection, "add", this.render);
   },
 
   tagName: "ul",
-  className: "list",
+  id: "list-wrapper",
 
   render: function() {
     var view = this;
+    $(this.el).empty();
     this.collection.each(function(task) {
       var item = new TodoApp.Views.TasksListItem({ model: task });
       $(view.el).append(item.render().el);

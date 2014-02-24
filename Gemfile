@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.15'
+gem 'ejs'
 gem 'backbone-on-rails'
 gem 'jbuilder', '~> 2.0.2'
 gem 'jquery-rails'
