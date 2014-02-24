@@ -20,7 +20,7 @@ ul {
       color: $faded;
     }
 
-    input {
+    input.task-item {
       display: block;
       float: left;
       width: 2em;
@@ -45,7 +45,8 @@ form {
   padding: 1em 2em;
   text-align: center;
 
-  input {
+  input#add-task {
     width: 80%;
+    height: 1.5em;
   }
 }
