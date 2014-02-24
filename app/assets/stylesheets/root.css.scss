@@ -1,21 +1,30 @@
 // Place all the styles related to the Root controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$font-color: #221E1F;
+$background-color: #A8DACF;
+$foreground-color: #ECEEE1;
+$accent-color: #D8403A;
+
 body {
   font-family: 'Helvetica Neue', Helvetica, Verdana, Arial, sans-serif;
-  width: 70%;
   margin: 2em auto;
+  background-color: $background-color;
+  color: $font-color;
 
   h2 {
     text-align: center;
+    font-weight: bold;
+    color: $accent-color;
   }
 }
 
 #content {
-  width: 50%;
+  width: 30%;
   min-width: auto;
   border-radius: .5em;
   border: .1em solid;
-  background-color: #eaeaea;
+  background-color: $foreground-color;
   margin: 2em auto;
+  box-shadow: 0 1px 3px 0px $font-color;
 }

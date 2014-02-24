@@ -1,6 +1,8 @@
 // Place all the styles related to the Tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$x-color: #F05B4F;
+$faded: #868682;
 
 ul {
   padding: 0;
@@ -12,6 +14,11 @@ ul {
     border-bottom: .1em solid;
     overflow: hidden;
     position: relative;
+
+    input[type=checkbox]:checked + label {
+      text-decoration: line-through;
+      color: $faded;
+    }
 
     input {
       display: block;
@@ -29,6 +36,7 @@ ul {
       right: 0;
       top: 0;
       padding: 1em 2em;
+      color: $x-color;
     }
   }
 }
