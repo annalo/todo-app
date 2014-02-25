@@ -53,13 +53,7 @@ describe Api::TasksController do
   end
 
   describe "#update" do
-    let(:task) { FactoryGirl.create(:task) }
-
-    it "saves updated task in database" do
-      put :update, :format => :json, id: task, task: FactoryGirl.attributes_for(:task, :completed => true)
-      task.reload
-      expect(task.completed).to eq(true)
-    end
+    it "saves updated task in database"
   end
 
   describe "#destroy" do

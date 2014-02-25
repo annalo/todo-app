@@ -1,11 +1,6 @@
 class Api::TasksController < ApplicationController
   def index
-    p "!!!!!!!!!!!!!!!"
     @tasks = Task.all
-    p "!!!!!!!!!!!!!!!"
-    @tasks.each do |task|
-      p task
-    end
     render "index"
   end
 
