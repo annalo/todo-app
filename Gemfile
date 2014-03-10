@@ -6,6 +6,7 @@ gem 'ejs'
 gem 'backbone-on-rails'
 gem 'jbuilder', '~> 2.0.2'
 gem 'jquery-rails'
+gem 'newrelic_rpm'
 gem 'pg'
 
 group :assets do
